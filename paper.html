@@ -65,12 +65,9 @@
 <script>
   const music = document.getElementById("bgMusic");
 
-  function startMusic() {
-    music.play();
-    document.removeEventListener("click", startMusic);
+  if (localStorage.getItem("playMusic") === "true") {
+    music.play().catch(() => {});
   }
-
-  document.addEventListener("click", startMusic);
 </script>
 
 
