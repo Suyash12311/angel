@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angel, my Love</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<audio id="bgMusic" loop>
+  <source src="music/Perfect.mp3" type="audio/mpeg">
+</audio>
+
+  <main>
+    <ul class="slider">
+      <li class="item" style="background-image: url('images/image1.jpeg')">
+        <div class="content">
+          <h2 class="title">NOW I got my valentine </h2>
+          <p class="description">
+            chāñd sitāre phuul parinde shaam saverā ek taraf
+saarī duniyā us kā charba us kā chehrā ek taraf
+          </p>
+          <button onclick="goToNextPage()">Click Click 💖</button>
+
+        </div>
+      </li>
+
+      <li class="item" style="background-image: url('images/image2.jpeg')">
+        <div class="content">
+          <h2 class="title">Your Eyes...</h2>
+          <p class="description">
+            jis shai par vo uñglī rakh de us ko vo dilvānī hai
+us kī ḳhushiyāñ sab se avval sastā mahñgā ek taraf
+          </p>
+          <button onclick="goToNextPage()">Click Click 💖</button>
+
+        </div>
+      </li>
+
+      <li class="item" style="background-image: url('images/image3.jpeg')">
+        <div class="content">
+          <h2 class="title">You are Always in my Mind</h2>
+          <p class="description">
+            Tum jo pucho apni ahmiyat Mujhse toh suno mohtarma, Ek tumko jo chura lu, Toh zamaana garib ho jaye.
+          </p>
+          <button onclick="goToNextPage()">Click Click 💖</button>
+        </div>
+      </li>
+
+      <li class="item" style="background-image: url('images/image4.jpeg')">
+        <div class="content">
+          <h2 class="title">When I Lost, I Found You</h2>
+          <p class="description">
+            OHHOOO sanssssss nhi aa rhi hai
+          </p>
+          <button onclick="goToNextPage()">Click Click 💖</button>
+
+        </div>
+      </li>
+
+      <li class="item" style="background-image: url('images/image5.jpeg')">
+        <div class="content">
+          <h2 class="title">You Are mineeeee</h2>
+          <p class="description">
+            i new it puraaa to padehegiiii hi 🐱❤️
+          </p>
+          <button onclick="goToNextPage()">Click Click 💖</button>
+        </div>
+      </li>
+    </ul>
+
+    <nav class="nav">
+      <ion-icon class="btn prev" name="arrow-back-outline"></ion-icon>
+      <ion-icon class="btn next" name="arrow-forward-outline"></ion-icon>
+    </nav>
+  </main>
+<script>
+  const music = document.getElementById("bgMusic");
+
+  if (localStorage.getItem("playMusic") === "true") {
+    music.play().catch(() => {});
+    localStorage.removeItem("playMusic");
+  }
+</script>
+
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
